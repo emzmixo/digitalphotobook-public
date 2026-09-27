@@ -1,0 +1,44 @@
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.page-front {
+    transform: rotateY(0deg);
+    box-shadow: inset 20px 0 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+.page-back {
+    transform: rotateY(180deg);
+    box-shadow: inset -20px 0 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+.cover-texture {
+    background-color: #5c3a21;
+    background-image:
+        url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.15"/></svg>'),
+        linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 4%, transparent 10%);
+    border: 2px solid #3b2515;
+}
+
+.diary-texture {
+    background-color: #fffdf9;
+    background-image: radial-gradient(#d4c4b7 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid #e8decb;
+}
+
+.cover-image-blend {
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+    filter: contrast(1.1) sepia(0.3);
+}
+
+@media (max-width: 640px) {
+    .diary-texture {
+        background-size: 12px 12px;
+    }
+}

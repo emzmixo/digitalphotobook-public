@@ -1,0 +1,54 @@
+.polaroid {
+    background: #ffffff;
+    padding: 8px 8px 24px 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.washi-tape {
+    position: absolute;
+    height: 20px;
+    width: 70px;
+    background-color: rgba(255, 235, 205, 0.8);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.washi-pink   { background-color: rgba(255, 182, 193, 0.7); }
+.washi-blue   { background-color: rgba(173, 216, 230, 0.7); }
+.washi-yellow { background-color: rgba(255, 253, 150, 0.7); }
+
+.click-zone-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.click-zone-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    z-index: 50;
+}
+
+@media (max-width: 640px) {
+    .polaroid {
+        padding: 4px 4px 14px 4px;
+    }
+
+    .washi-tape {
+        height: 14px;
+        width: 50px;
+        top: -7px;
+    }
+}
